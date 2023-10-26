@@ -1,5 +1,25 @@
 .wrapper {
-    margin: 0 auto;
-    border: 1px solid red;
+    margin: 50px auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid red; */
     max-width: 1440px;
+}
+
+#inputLoad {
+    margin: 20px auto;
+    width: fit-content;
+    /* border: 1px solid red; */
+}
+
+#canvas {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }

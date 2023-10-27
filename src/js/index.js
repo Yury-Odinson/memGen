@@ -1,7 +1,6 @@
-const canvas = document.getElementById("canvas")
-const context = canvas.getContext("2d")
-const inputLoad = document.getElementById("inputLoad")
+import { canvas, context, fontsizeLo, fontsizeUp, inputLoad, inputLowerText, inputUpperText, lowerText, upperText } from "./constants.js"
 
+// load image in the canvas
 inputLoad.addEventListener("change", (e) => {
     const file = e.target.files[0]
     console.log(URL.createObjectURL(file))
@@ -9,11 +8,34 @@ inputLoad.addEventListener("change", (e) => {
     image.src = URL.createObjectURL(file)
 
     image.onload = () => {
-        image.width = canvas.width
-        image.height = canvas.height
+        canvas.width = image.width
+        canvas.height = image.height
         context.drawImage(image, 0, 0, canvas.width, canvas.height)
     }
     image.onerror = () => {
         console.log("check")
     }
+})
+
+// input text 
+inputUpperText.addEventListener("input", () => {
+    upperText.textContent = inputUpperText.value.toUpperCase()
+})
+
+inputLowerText.addEventListener("input", () => {
+    lowerText.textContent = inputLowerText.value.toUpperCase()
+})
+
+// change font size from the text
+// value - font size, target - upper or lower text
+function setFontSize(value, target) {
+    return target.style.fontSize = `${value}px`
+}
+
+fontsizeUp.addEventListener("change", () => {
+    setFontSize(fontsizeUp.value, upperText)
+})
+
+fontsizeLo.addEventListener("change", () => {
+    setFontSize(fontsizeLo.value, lowerText)
 })

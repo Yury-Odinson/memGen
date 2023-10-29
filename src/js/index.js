@@ -1,25 +1,28 @@
-import { buttonDownload, canvas, context, inputLoad, upperText, inputUpperText, lowerText, inputLowerText } from "./constants.js"
-import { getStorageImg, storageUpperText, storageLowerText } from "./storage.js"
+import { buttonDownload, canvas, context, inputLoad, upperText, lowerText } from "./constants.js"
+import { storageUpperText, storageLowerText } from "./storage.js"
 
-// load image from localStorage
-getStorageImg()
+const image = new Image()
 
 // load image in the canvas
 inputLoad.addEventListener("change", (e) => {
     const file = e.target.files[0]
-    const image = new Image()
+    image.width = 800
+    image.height = 800
     image.src = URL.createObjectURL(file)
 
     image.onload = () => {
-        localStorage.setItem("image", image.src)
-        canvas.width = image.width
-        canvas.height = image.height
-        context.drawImage(image, 0, 0, canvas.width, canvas.height)
+        renderImage()
     }
     image.onerror = () => {
         console.log("check")
     }
 })
+
+export function renderImage() {
+    canvas.width = image.width
+    canvas.height = image.height
+    context.drawImage(image, 0, 0, canvas.width, canvas.height)
+}
 
 buttonDownload.addEventListener("click", () => {
     const dataURL = canvas.toDataURL("image/png")
@@ -32,7 +35,5 @@ buttonDownload.addEventListener("click", () => {
     downloadLink.click();
 })
 
-inputUpperText.value = storageUpperText.toLocaleLowerCase()
 upperText.textContent = storageUpperText
-inputLowerText.value = storageLowerText.toLocaleLowerCase()
 lowerText.textContent = storageLowerText

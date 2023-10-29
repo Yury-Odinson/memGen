@@ -196,8 +196,7 @@
     justify-content: space-between;
 }
 
-#fontsize_up,
-#fontsize_lo {
+#fontSize{
     width: 70px;
     font-size: 20px;
     border: none;

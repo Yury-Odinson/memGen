@@ -9,3 +9,5 @@ export const upperText = document.querySelector(".upperText__item")
 export const inputLowerText = document.getElementById("textInput_lo")
 export const fontsizeLo = document.getElementById("fontsize_lo")
 export const lowerText = document.querySelector(".lowerText__item") 
+
+export const buttonDownload = document.getElementById("buttonDownload")

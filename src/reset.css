@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 
+:root {
+    --BackgroundDark: #F0ECF4;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +16,6 @@ html {
     text-decoration: none;
     list-style-type: none;
     outline: none;
-    background-color: #dad7cd41;
+    background-color: var(--BackgroundDark);
     transition: 0.2s;
 }

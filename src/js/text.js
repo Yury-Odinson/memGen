@@ -1,14 +1,19 @@
 import { fontsizeLo, fontsizeUp, inputLowerText, inputUpperText, lowerText, upperText } from "./constants.js"
+import { setStorageText } from "./storage.js"
+
+
 
 // input text 
 inputUpperText.addEventListener("input", () => {
     upperText.textContent = inputUpperText.value.toUpperCase()
-    setCursor(upperText)
+    // setCursor(upperText)
+    setStorageText("upperText", upperText.textContent)
 })
 
 inputLowerText.addEventListener("input", () => {
     lowerText.textContent = inputLowerText.value.toUpperCase()
     setCursor(lowerText)
+    setStorageText("lowerText", lowerText.textContent)
 })
 
 // change cursor style (for the future to move text)

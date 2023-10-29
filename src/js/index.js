@@ -1,5 +1,5 @@
-import { canvas, context, inputLoad } from "./constants.js"
-import { getStorageImg } from "./storage.js"
+import { buttonDownload, canvas, context, inputLoad, upperText, inputUpperText, lowerText, inputLowerText } from "./constants.js"
+import { getStorageImg, storageUpperText, storageLowerText } from "./storage.js"
 
 // load image from localStorage
 getStorageImg()
@@ -20,3 +20,19 @@ inputLoad.addEventListener("change", (e) => {
         console.log("check")
     }
 })
+
+buttonDownload.addEventListener("click", () => {
+    const dataURL = canvas.toDataURL("image/png")
+    const downloadLink = document.createElement("a");
+    downloadLink.href = dataURL;
+
+    // Устанавливаем имя файла для скачивания (можете указать любое имя)
+    downloadLink.download = "my_image.png";
+    // Симулируем клик на ссылку для начала загрузки
+    downloadLink.click();
+})
+
+inputUpperText.value = storageUpperText.toLocaleLowerCase()
+upperText.textContent = storageUpperText
+inputLowerText.value = storageLowerText.toLocaleLowerCase()
+lowerText.textContent = storageLowerText

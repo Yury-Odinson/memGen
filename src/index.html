@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,64 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <title>memG-g-gen</title>
 </head>
+
 <body>
 
+
     <div class="wrapper">
+        <div class="header">
+            <label class="custom__loadFile">
+                <input type="file" id="inputLoad">
+                <img class="custom-load__image" src="./image/upload-image.png" width="50" height="50">
+                <span class="custom-load__text">Load image</span>
+            </label>
+        </div>
+        <div class="body">
+            <div class="canvas-wrapper">
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="nav">
+                <label class="nav-label">
+                    <span>Enter upper text</span>
+                    <input class="input-text" id="textInput_up" type="text" placeholder="Your text...">
+                </label>
+
+                <label class="nav-label">
+                    <span>Enter lower text</span>
+                    <input class="input-text" id="textInput_lo" type="text" placeholder="Your text...">
+                </label>
+                <label class="nav-label">
+                    <div>
+                        <span>Font style</span>
+                        <select id="selectFont">
+                            <option>Comic Sans MS</option>
+                            <option>Monsterrat</option>
+                            <option>Arial</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>Font size</span>
+                        <input id="fontSize" type="number" value="50">
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="footer">
+            <button class="custom__saveFile" id="buttonDownload">
+                <img class="custom-download__image" src="./image/download-image.png" width="50" height="50">
+                Download
+            </button>
+        </div>
+
     </div>
-    
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/text.js"></script>
 </body>
+
 </html>

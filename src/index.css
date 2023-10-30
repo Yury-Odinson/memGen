@@ -1,6 +1,5 @@
 .wrapper {
     margin: 0 auto;
-    /* padding: 50px; */
     display: flex;
     flex-direction: column;
     max-width: fit-content;
@@ -59,7 +58,6 @@
 
 
 .custom__saveFile {
-    border: 1px solid red;
     border: none;
     font-weight: 200;
     font-size: 24px;
@@ -79,91 +77,6 @@
     -webkit-box-shadow: 4px 0px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 4px 0px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 0px 8px 0px rgba(34, 60, 80, 0.2);
-}
-
-.upperText,
-.lowerText {
-    position: absolute;
-    display: flex;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    word-wrap: break-word;
-    text-align: center;
-    overflow: hidden;
-    font-size: 42px;
-    font-weight: 900;
-    cursor: default;
-    /* border: 1px solid red; */
-    color: #fff;
-    letter-spacing: 6px;
-    text-shadow:
-        -0 -4px 1px #000000,
-        0 -4px 1px #000000,
-        -0 4px 1px #000000,
-        0 4px 1px #000000,
-        -4px -0 1px #000000,
-        4px -0 1px #000000,
-        -4px 0 1px #000000,
-        4px 0 1px #000000,
-        -1px -4px 1px #000000,
-        1px -4px 1px #000000,
-        -1px 4px 1px #000000,
-        1px 4px 1px #000000,
-        -4px -1px 1px #000000,
-        4px -1px 1px #000000,
-        -4px 1px 1px #000000,
-        4px 1px 1px #000000,
-        -2px -4px 1px #000000,
-        2px -4px 1px #000000,
-        -2px 4px 1px #000000,
-        2px 4px 1px #000000,
-        -4px -2px 1px #000000,
-        4px -2px 1px #000000,
-        -4px 2px 1px #000000,
-        4px 2px 1px #000000,
-        -3px -4px 1px #000000,
-        3px -4px 1px #000000,
-        -3px 4px 1px #000000,
-        3px 4px 1px #000000,
-        -4px -3px 1px #000000,
-        4px -3px 1px #000000,
-        -4px 3px 1px #000000,
-        4px 3px 1px #000000,
-        -4px -4px 1px #000000,
-        4px -4px 1px #000000,
-        -4px 4px 1px #000000,
-        4px 4px 1px #000000,
-        -4px -4px 1px #000000,
-        4px -4px 1px #000000,
-        -4px 4px 1px #000000,
-        4px 4px 1px #000000;
-}
-
-.upperText {
-    top: 0;
-}
-
-.lowerText {
-    bottom: 0;
-}
-
-.upperText__item,
-.lowerText__item {
-    margin: 0 auto;
-}
-
-#upperText {
-    margin: 0 auto;
-    background-color: #ffffff00;
-    overflow: hidden;
-    max-width: 100%;
-    min-height: 80px;
-    font-size: 45px;
-    font-weight: 900;
-    text-align: center;
-    word-wrap: break-word;
-    color: #000;
 }
 
 .nav {
@@ -211,4 +124,23 @@
     text-align: center;
     border: none;
     background-color: var(--BackgroundDark);
+}
+
+@media (max-width: 500px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .body {
+        flex-direction: column;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    #canvas {
+        width: 100%;
+        height: 100%;
+    }
 }

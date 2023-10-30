@@ -34,6 +34,3 @@ buttonDownload.addEventListener("click", () => {
     // Симулируем клик на ссылку для начала загрузки
     downloadLink.click()
 })
-
-upperText.textContent = storageUpperText
-lowerText.textContent = storageLowerText

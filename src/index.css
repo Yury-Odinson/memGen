@@ -1,5 +1,5 @@
 .wrapper {
-    margin: 100px auto;
+    margin: 0 auto;
     /* padding: 50px; */
     display: flex;
     flex-direction: column;
@@ -73,12 +73,12 @@
 
 #canvas {
     margin: 0 auto;
-    width: 500px;
-    height: 500px;
+    width: 800px;
+    height: 800px;
     background-color: #fff;
-    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -webkit-box-shadow: 4px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 0px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .upperText,
@@ -169,7 +169,7 @@
 .nav {
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 800px;
 
     background-color: #fff;
 }

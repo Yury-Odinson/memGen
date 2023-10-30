@@ -1,9 +1,10 @@
-import { canvas, context, fontSize, inputLowerText, inputUpperText } from "./constants.js"
+import { canvas, context, fontSize, inputLowerText, inputUpperText, selectFont } from "./constants.js"
 import { renderImage } from "./index.js"
 
 let fSize = 50
+let fStyle = "Comic Sans MS"
 
-function setText(fontSize, fontStyle) {
+function renderText(fontSize, fontStyle) {
     context.font = `bold ${fontSize}px ${fontStyle}`
     context.fontWidth = "900"
     context.strokeStyle = "black"
@@ -19,16 +20,22 @@ function setText(fontSize, fontStyle) {
 // input text 
 inputUpperText.addEventListener("change", () => {
     renderImage()
-    setText(fSize, "Monsterrat")
+    renderText(fSize, fStyle)
 })
 inputLowerText.addEventListener("change", () => {
     renderImage()
-    setText(fSize, "Monsterrat")
+    renderText(fSize, fStyle)
 })
 
 // change font size from the text
 fontSize.onchange = () => {
     renderImage()
-    setText(fSize, "Monsterrat")
+    renderText(fSize, fStyle)
     fSize = fontSize.value
 }
+
+selectFont.addEventListener("change", () => {
+    fStyle = selectFont.value
+    renderImage()
+    renderText(fSize, fStyle)
+})

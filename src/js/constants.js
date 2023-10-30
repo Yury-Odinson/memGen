@@ -9,5 +9,6 @@ export const inputLowerText = document.getElementById("textInput_lo")
 export const lowerText = document.querySelector(".lowerText__item") 
 
 export const fontSize = document.getElementById("fontSize")
+export const selectFont = document.getElementById("selectFont")
 
 export const buttonDownload = document.getElementById("buttonDownload")

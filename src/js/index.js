@@ -26,13 +26,13 @@ export function renderImage() {
 
 buttonDownload.addEventListener("click", () => {
     const dataURL = canvas.toDataURL("image/png")
-    const downloadLink = document.createElement("a");
-    downloadLink.href = dataURL;
+    const downloadLink = document.createElement("a")
+    downloadLink.href = dataURL
 
     // Устанавливаем имя файла для скачивания (можете указать любое имя)
-    downloadLink.download = "my_image.png";
+    downloadLink.download = "my_mem.png"
     // Симулируем клик на ссылку для начала загрузки
-    downloadLink.click();
+    downloadLink.click()
 })
 
 upperText.textContent = storageUpperText

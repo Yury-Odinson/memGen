@@ -1,5 +1,4 @@
-import { buttonDownload, canvas, context, inputLoad, upperText, lowerText } from "./constants.js"
-import { storageUpperText, storageLowerText } from "./storage.js"
+import { buttonDownload, canvas, context, inputLoad } from "./constants.js"
 
 const image = new Image()
 
@@ -29,8 +28,8 @@ buttonDownload.addEventListener("click", () => {
     const downloadLink = document.createElement("a")
     downloadLink.href = dataURL
 
-    // Устанавливаем имя файла для скачивания (можете указать любое имя)
+    // link for download result image
     downloadLink.download = "my_mem.png"
-    // Симулируем клик на ссылку для начала загрузки
+    // simulation click event for download
     downloadLink.click()
 })
